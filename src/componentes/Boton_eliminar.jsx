@@ -8,7 +8,8 @@ const BotonEliminar = ({ id, onEliminar }) => {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        body:JSON.stringify({id:id}),
       })
         .then((respuesta) => respuesta.json())
         .then((data) => {
